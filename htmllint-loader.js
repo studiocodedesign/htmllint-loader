@@ -424,7 +424,7 @@ module.exports = function htmlLint(source) {
   const options = assign(
     {
       config,
-      failOnError: true,
+      failOnError: process.env.NODE_ENV === 'production',
       failWarning: false,
     },
     this.query
